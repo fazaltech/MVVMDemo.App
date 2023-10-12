@@ -1,4 +1,6 @@
-﻿namespace MVVMDemo;
+﻿using MVVMDemo.MVVM.Views;
+
+namespace MVVMDemo;
 
 public partial class App : Application
 {
@@ -6,6 +8,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new PersonView();
 	}
 }
