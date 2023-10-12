@@ -1,4 +1,5 @@
 using MVVMDemo.MVVM.Models;
+using MVVMDemo.MVVM.ViewModels;
 
 namespace MVVMDemo.MVVM.Views;
 
@@ -8,11 +9,7 @@ public partial class PersonView : ContentPage
 	{
 		InitializeComponent();
 
-		var person = new Person 
-		{
-		Name = "Hector",
-		Age = 50
-		};
-		BindingContext = person;
+		
+		BindingContext = new PersonViewModel();
 	}
 }
