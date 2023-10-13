@@ -6,5 +6,9 @@
     Title="CommandsView">
     <StackLayout>
         <Button Command="{Binding ClickCommand}" Text="Click ME!" />
+        <SearchBar
+            x:Name="searchBar"
+            SearchCommand="{Binding SearchCommand}"
+            SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}" />
     </StackLayout>
 </ContentPage>

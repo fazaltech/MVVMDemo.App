@@ -10,6 +10,8 @@ namespace MVVMDemo.MVVM.ViewModels
     public class CommandsViewModel
     {
         public ICommand ClickCommand { get; }
+        public ICommand SearchCommand { get; set; }
+        public string SearchTerm { get; set; }
 
 
         public CommandsViewModel()
@@ -18,6 +20,9 @@ namespace MVVMDemo.MVVM.ViewModels
             {
 				App.Current.MainPage.DisplayAlert("Title", "message", "Ok");
 			});
+            SearchCommand = new Command((s) => {
+                var data = s;
+            });
         }
         
 	}
